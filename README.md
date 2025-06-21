@@ -1,31 +1,56 @@
-# Space Invaders
+# Space Invaders Clone
 
-Este proyecto es una versión del clásico juego *Space Invaders* desarrollado con **Python** y la librería **Turtle**. Forma parte de una asignación del curso que estoy siguiendo, y está diseñado como práctica sin fines comerciales.
+This is a **Space Invaders**-inspired game developed in Python using the `turtle` graphics module and `pygame` for sound playback.  
+The project was created as part of the *"100 Days of Code: The Complete Python Pro Bootcamp"* course and serves as a hands-on exercise to reinforce object-oriented programming concepts and animation handling.
 
-## Características
+## Features
 
-- Movimiento lateral de la nave.
-- Disparos del jugador y enemigos.
-- Barreras destructibles.
-- Sistema de puntuación y vidas.
-- Animación de enemigos.
-- Soporte para sonidos (`pygame.mixer`).
+- Classic arcade-style gameplay with:
+  - Moving invaders that drop bombs
+  - A player-controlled spacecraft that can move and shoot lasers
+  - Barriers for temporary protection
+  - Lives system and score tracking
+- Pixel-art style using custom `.gif` sprites
+- Sound effects using `pygame.mixer`:
+  - Laser shots
+  - Explosions
+  - Win/Lose feedback
 
-## Requisitos
+## Project Structure
 
-- Python 3.7 o superior
-- Sonidos y sprites incluidos en el mismo directorio
+```
+.
+├── board.py         # Scoreboard and lives display
+├── invader.py       # Invaders and enemy bomb logic
+├── spacecraft.py    # Player, barriers, and laser logic
+├── settings.py      # Game configuration and constants
+├── sounds.py        # Sound effect setup
+├── main.py          # Main game loop and initialization
+├── *.gif            # Sprite images (invader1.gif, invader2.gif, spacecraft.gif)
+├── *.wav            # Sound files (shoot.wav, explode.wav, win.wav, lose.wav)
+```
 
-## Notas
+## Controls
 
-- Si los sonidos no se reproducen, asegúrate de tener archivos `.wav` con los nombres correctos (`shoot.wav`, `explode.wav`, `lose.wav`).
-- Los GIFs (`invader1.gif`, `invader2.gif`, `spacecraft.gif`) deben estar en el mismo directorio del proyecto.
+- Left Arrow: Move spacecraft left  
+- Right Arrow: Move spacecraft right  
+- Spacebar: Shoot laser
 
----
+## Requirements
 
-## Créditos
+Make sure to have Python 3 and the following packages installed:
 
-- Los sprites y sonidos utilizados son públicos o de libre distribución para fines educativos.
-- Si el juego no inicia correctamente, asegúrate de que los archivos multimedia estén disponibles y correctamente nombrados.
+```
+pip install pygame
+```
 
-Enjoy! 👾
+Additionally, ensure the following files are in the same directory:
+
+- invader1.gif, invader2.gif, spacecraft.gif
+- shoot.wav, explode.wav, win.wav, lose.wav
+
+## Notes
+
+- This is an educational project and not intended for production or commercial use.
+- Sprites and sounds are used purely for learning purposes and are not distributed with copyright intent.
+- If the game does not start or sound fails, check that your system supports `pygame.mixer` and all assets are present.
